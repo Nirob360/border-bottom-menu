@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav{    
+ 
+    
+    height: 80px;
+    background-color: black;
+}
+
+.container {
+    margin: auto;
+    width: 1170px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo  {
+    width: 20%;
+    text-align: left;
+    a{
+        display: block;
+        font-size: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+ul{
+    width: 80%;
+    list-style: none;
+    text-align-last: right;
+    li{
+        display: inline-block;
+        margin: 0 15px;
+       
+        a{
+            display: block;
+            text-align: left;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 22px;
+            text-transform: capitalize;
+            text-decoration: none;
+            position: relative;
+            transition: .4s linear;
+            
+
+        }
+        a:hover{
+            color: #ff0000;
+        }
+        a::before{
+            content:'';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-image:linear-gradient(204deg, rgba(223,16,255,1) 31%, rgba(225,0,0,1) 43%, rgba(35,255,0,1) 100%);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition:transform .4s linear;
+        }
+        a:hover::before{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+   li:last-child{
+       margin-right: 0;
+
+       a{
+           border-radius: 30px;
+           background: #c561ff;
+           padding: 10px 20px;
+           text-transform: uppercase;
+       }
+       a::before{
+           display: none;
+       }
+   }
+}

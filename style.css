@@ -1,0 +1,109 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 80px;
+  background-color: black;
+}
+
+.container {
+  margin: auto;
+  width: 1170px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  width: 20%;
+  text-align: left;
+}
+
+.logo a {
+  display: block;
+  font-size: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+ul {
+  width: 80%;
+  list-style: none;
+  text-align-last: right;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+ul li a {
+  display: block;
+  text-align: left;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+}
+
+ul li a:hover {
+  color: #ff0000;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-image: linear-gradient(204deg, #df10ff 31%, #e10000 43%, #23ff00 100%);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .4s linear;
+  transition: -webkit-transform .4s linear;
+  transition: transform .4s linear;
+  transition: transform .4s linear, -webkit-transform .4s linear;
+}
+
+ul li a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul li:last-child a {
+  border-radius: 30px;
+  background: #c561ff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+ul li:last-child a::before {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
